@@ -211,7 +211,7 @@ class Eclipse:
 
         kk2 = (c_double * len(kk))(*kk)
         
-        my_func = WinDLL('dependences/funcaop.dll', winmode = 0x8)
+        my_func = WinDLL('dependences/func64.dll', winmode = 0x8)
         my_func.curvaLuz.restype = c_double
         my_func.curvaLuz.argtypes = c_double,c_double,c_int,c_int,POINTER(c_double),POINTER(c_double),c_double
         my_func.curvaLuzLua.restype = c_double

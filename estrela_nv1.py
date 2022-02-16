@@ -54,7 +54,7 @@ class estrela:
         #self.colors = ["gray","pink","hot"]
         error=0
 
-        my_func = WinDLL('/dependences/funcaop.dll', winmode = 0x8)
+        my_func = WinDLL('dependences/func64.dll', winmode = 0x8)
         my_func.criaEstrela.restype = ndpointer(dtype=c_int, ndim=2, shape=(self.tamanhoMatriz,self.tamanhoMatriz))
         self.estrela = my_func.criaEstrela(self.tamanhoMatriz,self.tamanhoMatriz,self.tamanhoMatriz,c_float(self.raio),c_float(self.intensidadeMaxima),c_float(self.coeficienteHum),c_float(self.coeficienteDois))
         #self.estrela = [[ 0.0 for i in range(self.tamanhoMatriz)] for j in range(self.tamanhoMatriz)]
